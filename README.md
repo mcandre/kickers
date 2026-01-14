@@ -1,5 +1,7 @@
 # kickers: SDLC workflow automators
 
+![license](https://img.shields.io/badge/license-BSD-3) [![Donate](https://img.shields.io/badge/GUMROAD-36a9ae?style=flat&logo=gumroad&logoColor=white)](https://mcandre.gumroad.com/)
+
 # ABOUT
 
 kickers automate common development workflows.
