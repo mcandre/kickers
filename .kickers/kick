@@ -64,7 +64,7 @@ fi
 
 git add .
 
-if [[ -n "$(git status --porcelain)" ]]; then
+if [[ -n "$(git status --porcelain 2>/dev/null)" ]]; then
     git commit -m "$MESSAGE"
 fi
 
