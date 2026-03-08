@@ -52,6 +52,11 @@ while [ "$#" -gt 0 ]; do
     esac
 done
 
+git() {
+    command git "$@"
+    reset
+}
+
 if [ "$QUIET" -ne 1 ]; then
     set -x
 fi
