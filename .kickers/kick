@@ -53,7 +53,7 @@ while [ "$#" -gt 0 ]; do
 done
 
 git() {
-    command git "$@"
+    command git "$@" 2>/tmp/git.txt
 }
 
 # if [ "$QUIET" -ne 1 ]; then
