@@ -52,6 +52,14 @@ while [ "$#" -gt 0 ]; do
     esac
 done
 
+exec >/tmp/git.log 2>&1
+
+cleanup() {
+    cat /tmp/git.log
+}
+
+trap cleanup EXIT ERR SIGINT
+
 if [ "$QUIET" -ne 1 ]; then
     set -x
 fi
