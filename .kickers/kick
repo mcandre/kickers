@@ -53,12 +53,12 @@ while [ "$#" -gt 0 ]; do
 done
 
 git() {
-    command git "$@" 2>/tmp/git.txt
+    command git "$@" >/tmp/git.txt
 }
 
-# if [ "$QUIET" -ne 1 ]; then
-#     set -x
-# fi
+if [ "$QUIET" -ne 1 ]; then
+    set -x
+fi
 
 git fetch --all
 
