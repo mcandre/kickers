@@ -52,10 +52,6 @@ while [ "$#" -gt 0 ]; do
     esac
 done
 
-git() {
-    command git "$@" 2>/tmp/git.txt
-}
-
 if [ "$QUIET" -ne 1 ]; then
     set -x
 fi
@@ -69,11 +65,10 @@ fi
 git add .
 
 if [ -n "$(git status --porcelain)" ]; then
-    git commit -am "$MESSAGE"
+    git commit -m "$MESSAGE"
 fi
 
 git pull
 git push
 git fetch --tags
-
 git push --tags
