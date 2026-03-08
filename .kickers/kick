@@ -52,9 +52,9 @@ while [ "$#" -gt 0 ]; do
     esac
 done
 
-if [ "$QUIET" -ne 1 ]; then
-    set -x
-fi
+# if [ "$QUIET" -ne 1 ]; then
+#     set -x
+# fi
 
 git fetch --all
 
@@ -68,8 +68,8 @@ if [ -n "$(git status --porcelain)" ]; then
     git commit -m "$MESSAGE"
 fi
 
-# git pull
-# git push
-# git fetch --tags
+git pull
+git push
+git fetch --tags
 
-# git push --tags
+git push --tags
