@@ -72,4 +72,4 @@ git pull
 git push
 git fetch --tags
 
-git push --tags
+# git push --tags
