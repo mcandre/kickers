@@ -56,9 +56,9 @@ git() {
     command git "$@" 2>/tmp/git.txt
 }
 
-if [ "$QUIET" -ne 1 ]; then
-    set -x
-fi
+# if [ "$QUIET" -ne 1 ]; then
+#     set -x
+# fi
 
 git fetch --all
 
