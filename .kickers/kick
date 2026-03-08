@@ -18,7 +18,7 @@ MESSAGE='up'
 NONCE=0
 QUIET=0
 
-while [[ "$#" -gt 0 ]]; do
+while [ "$#" -gt 0 ]; do
     ARG="$1"
 
     case "$ARG" in
@@ -29,7 +29,7 @@ while [[ "$#" -gt 0 ]]; do
         '-m')
             shift
 
-            if [[ "$#" -lt 1 ]]; then
+            if [ "$#" -lt 1 ]; then
                 usage
                 exit 1
             fi
@@ -52,19 +52,19 @@ while [[ "$#" -gt 0 ]]; do
     esac
 done
 
-if [[ "$QUIET" -ne 1 ]]; then
+if [ "$QUIET" -ne 1 ]; then
     set -x
 fi
 
 git fetch --all
 
-if [[ "$NONCE" -eq 1 ]]; then
+if [ "$NONCE" -eq 1 ]; then
     date >.kick
 fi
 
 git add .
 
-if [[ -n "$(git status --porcelain)" ]]; then
+if [ -n "$(git status --porcelain)" ]; then
     git commit -m "$MESSAGE"
 fi
 
