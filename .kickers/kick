@@ -1,6 +1,6 @@
 #!/bin/bash
 unset IFS
-set -eufo pipefail
+set -euf
 
 #
 # Sync changes between local and remote for current git branch
