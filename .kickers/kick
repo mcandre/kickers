@@ -70,6 +70,6 @@ fi
 
 git pull
 git push
-git fetch --tags
+# git fetch --tags
 
 # git push --tags
