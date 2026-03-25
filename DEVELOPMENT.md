@@ -10,7 +10,6 @@ We follow standard, `make` based operations for performing build operations.
 * [bash](https://www.gnu.org/software/bash/) 4+
 * [Go](https://go.dev/)
 * [make](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/make.html)
-* [Rust](https://rust-lang.org/)
 * [ShellCheck](https://www.shellcheck.net/) 0.11.0+
 * Provision additional dev tools with `make -f install.mk`
 
