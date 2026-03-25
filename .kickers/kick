@@ -22,33 +22,33 @@ while [ "$#" -gt 0 ]; do
     ARG="$1"
 
     case "$ARG" in
-        '-h')
-            usage
-            exit
-            ;;
-        '-m')
-            shift
+    '-h')
+        usage
+        exit
+        ;;
+    '-m')
+        shift
 
-            if [ "$#" -lt 1 ]; then
-                usage
-                exit 1
-            fi
-
-            MESSAGE="$1"
-            shift
-            ;;
-        '-n')
-            NONCE=1
-            shift
-            ;;
-        '-q')
-            QUIET=1
-            shift
-            ;;
-        *)
+        if [ "$#" -lt 1 ]; then
             usage
             exit 1
-            ;;
+        fi
+
+        MESSAGE="$1"
+        shift
+        ;;
+    '-n')
+        NONCE=1
+        shift
+        ;;
+    '-q')
+        QUIET=1
+        shift
+        ;;
+    *)
+        usage
+        exit 1
+        ;;
     esac
 done
 

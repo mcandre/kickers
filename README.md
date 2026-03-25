@@ -2,60 +2,19 @@
 
 [![license](https://img.shields.io/badge/license-BSD-3)](LICENSE.md)
 
-# ABOUT
+# SUMMARY
 
-kickers automate common development workflows.
-
-Workflows are customizable on a per-user and/or per-repository basis.
+kickers provides a framework for per-repository, per-user scripts.
 
 # EXAMPLE
 
 ```console
-$ kick
+% kick
 Everything up-to-date
 ```
 
-The example [.kickers/kick](.kickers/kick) script automates common git operations, such as syncing the current git branch between local and remote repositories.
+For details on tuning kickers, see [CONFIGURATION](CONFIGURATION.md).
 
-See `kick -h` for more options.
-
-# REQUIREMENTS
-
-* [direnv](https://direnv.net/) 2
-
-## Recommended
-
-* [git](https://git-scm.com/) 2.46.1+
-* [GNU bash](https://www.gnu.org/software/bash/) 4+
-
-# SETUP
-
-1. Install direnv.
-2. Register some per-user and/or per-project kicker scripts.
-
-## PER-USER KICKER SCRIPTS
-
-Per-user kicker scripts apply to most of your local projects.
-
-```console
-$ mkdir -p ~/.kickers
-$ cp global.envrc ~/.envrc
-$ direnv allow
-$ cp kickers/.kickers/kick ~/.kickers
-$ chmod +x ~/.kickers/kick
-```
-
-## PER-PROJECT KICKER SCRIPTS
-
-Per-project scripts apply to specific project(s), and may override per-user scripts based on the script basename.
-
-```console
-$ cd <project>
-$ mkdir -p .kickers
-$ cp .../kickers/sample.envrc ~/.envrc
-$ direnv allow
-$ cp .../kickers/.kickers/kick .kickers
-$ chmod +x .kickers/kick
-```
+For details on building from source, see [DEVELOPMENT](DEVELOPMENT.md).
 
 👟
