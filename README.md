@@ -1,6 +1,6 @@
 # kickers: SDLC workflow automators
 
-[![license](https://img.shields.io/badge/license-BSD-0)](LICENSE.md)
+[![Lint](https://github.com/mcandre/kickers/actions/workflows/lint.yml/badge.svg)](https://github.com/mcandre/kickers/actions/workflows/lint.yml) [![license](https://img.shields.io/badge/license-BSD-0)](LICENSE.md)
 
 ![shoe wall](kickers.png)
 
