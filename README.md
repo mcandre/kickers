@@ -1,6 +1,6 @@
 # kickers: SDLC workflow automators
 
-[![license](https://img.shields.io/badge/license-BSD-3)](LICENSE.md)
+[![license](https://img.shields.io/badge/license-BSD-0)](LICENSE.md)
 
 ![shoe wall](kickers.png)
 
