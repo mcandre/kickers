@@ -2,6 +2,8 @@
 
 [![license](https://img.shields.io/badge/license-BSD-3)](LICENSE.md)
 
+![shoe wall](kickers.png)
+
 # SUMMARY
 
 kickers provides a framework for per-repository, per-user scripts.
