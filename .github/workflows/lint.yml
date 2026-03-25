@@ -1,0 +1,24 @@
+---
+name: "Lint"
+on: # yamllint disable-line rule:truthy
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  Lint:
+    runs-on: "ubuntu-24.04"
+    steps:
+    - uses: "actions/checkout@v4"
+    - uses: "actions/setup-go@v5"
+      with:
+        go-version: "1.26.1"
+    - uses: "dtolnay/rust-toolchain@stable"
+      with:
+        toolchain: "1.92.0"
+    - name: "provision shell tools"
+      run: |
+        sudo apt update
+        sudo apt install -y shellcheck zsh
+    - name: "provision dev tools"
+      run: "make -f install.mk"
+    - run: "make"
