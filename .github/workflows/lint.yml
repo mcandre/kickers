@@ -15,7 +15,7 @@ jobs:
     - name: "provision shell tools"
       run: |
         sudo apt update
-        sudo apt install -y shellcheck zsh
+        sudo apt install -y shellcheck
     - name: "provision dev tools"
       run: "make -f install.mk"
     - run: "make"
