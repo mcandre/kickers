@@ -25,17 +25,17 @@ git() {
     case "$subcommand" in
         checkout|clone|fetch|pull|push|submodule)
             if [ "$QUIET" -ne 1 ]; then
-                echo +git "$subcommand" --no-progress "$@" ">/dev/null"
+                echo +git "$subcommand" --no-progress "$@"
             fi
 
-            command git "$subcommand" --no-progress "$@" >/dev/null
+            command git "$subcommand" --no-progress "$@"
             ;;
         *)
             if [ "$QUIET" -ne 1 ]; then
-                echo +git "$subcommand" "$@" ">/dev/null"
+                echo +git "$subcommand" "$@"
             fi
 
-            command git "$subcommand" "$@" >/dev/null
+            command git "$subcommand" "$@"
             ;;
     esac
 }
