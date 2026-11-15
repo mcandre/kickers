@@ -32,7 +32,7 @@ git() {
             ;;
         *)
             if [ "$QUIET" -ne 1 ]; then
-                echo +command git "$subcommand" "$@"
+                echo +git "$subcommand" "$@"
             fi
 
             command git "$subcommand" "$@"
