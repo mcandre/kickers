@@ -52,6 +52,10 @@ while [ "$#" -gt 0 ]; do
     esac
 done
 
+if [ "$QUIET" -ne 1 ]; then
+    set -x
+fi
+
 git fetch --all
 
 if [ "$NONCE" -eq 1 ]; then
