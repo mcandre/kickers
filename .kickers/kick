@@ -22,8 +22,6 @@ git() {
     subcommand="$1"
     shift
 
-    echo "subcommand: $subcommand"
-
     case "$subcommand" in
         'checkout|clone|fetch|pull|push|submodule')
             command git "$subcommand" --no-progress "$@"
