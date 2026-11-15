@@ -70,5 +70,5 @@ fi
 
 git pull
 git push
-git fetch --tags
+git fetch --no-progress --tags
 git push --tags
