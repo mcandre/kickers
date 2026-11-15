@@ -23,7 +23,7 @@ git() {
     shift
 
     case "$subcommand" in
-        'checkout|clone|fetch|pull|push|submodule')
+        checkout|clone|fetch|pull|push|submodule)
             if [ "$QUIET" -ne 1 ]; then
                 echo +git "$subcommand" --no-progress "$@"
             fi
