@@ -18,28 +18,6 @@ MESSAGE='up'
 NONCE=0
 QUIET=0
 
-git() {
-    subcommand="$1"
-    shift
-
-    case "$subcommand" in
-        checkout|clone|fetch|pull|push|submodule)
-            if [ "$QUIET" -ne 1 ]; then
-                echo +git "$subcommand" --no-progress "$@"
-            fi
-
-            command git "$subcommand" --no-progress "$@"
-            ;;
-        *)
-            if [ "$QUIET" -ne 1 ]; then
-                echo +git "$subcommand" "$@"
-            fi
-
-            command git "$subcommand" "$@"
-            ;;
-    esac
-}
-
 while [ "$#" -gt 0 ]; do
     ARG="$1"
 
