@@ -18,6 +18,22 @@ MESSAGE='up'
 NONCE=0
 QUIET=0
 
+git() {
+    subcommand="$1"
+    shift
+
+    echo "subcommand: $subcommand"
+
+    case "$subcommand" in
+        'checkout|clone|fetch|pull|push|submodule')
+            command git "$subcommand" --no-progress "$@"
+            ;;
+        *)
+            command git "$subcommand" "$@"
+    ;;
+    esac
+}
+
 while [ "$#" -gt 0 ]; do
     ARG="$1"
 
@@ -68,7 +84,7 @@ if [ -n "$(git status --porcelain)" ]; then
     git commit -m "$MESSAGE"
 fi
 
-git pull --no-progress
-git push --no-progress
-git fetch --no-progress --tags
-git push --no-progress --tags
+git pull
+git push
+git fetch --tags
+git push --tags
