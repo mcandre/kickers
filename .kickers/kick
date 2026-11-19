@@ -56,7 +56,7 @@ if [ "$QUIET" -ne 1 ]; then
     set -x
 fi
 
-git fetch --no-progress --all
+git fetch --all
 
 if [ "$NONCE" -eq 1 ]; then
     date >.kick
@@ -68,7 +68,7 @@ if [ -n "$(git status --porcelain)" ]; then
     git commit -m "$MESSAGE"
 fi
 
-git pull --no-progress
-git push --no-progress
-git fetch --no-progress --tags
-git push --no-progress --tags
+git pull
+git push
+git fetch --tags
+git push --tags
