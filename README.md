@@ -1,6 +1,6 @@
 # kickers: SDLC workflow automators
 
-[![CI/CD](https://badgen.net/github/checks/mcandre/kickers?icon=github)](https://github.com/mcandre/kickers/actions) [![License](https://badgen.net/static/license/BSD/ab2b29?icon=freebsd)](LICENSE.md)
+[![CI/CD](https://badgen.net/github/checks/mcandre/kickers?icon=github)](https://github.com/mcandre/kickers/actions) [![License](https://badgen.net/static/license/BSD/ab2b29?icon=freebsd)](LICENSE.md) [![AI](https://badgen.net/static/人/NO%20AI?color=aa4a44)](AI-DECLARATION.md)
 
 ![shoe wall](kickers.png)
 
